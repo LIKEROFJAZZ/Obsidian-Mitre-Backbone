@@ -1,2 +1,2 @@
 # Obsidian-Mitre-Backbone
-An Obsidian notes offensive note-taking template
+An Obsidian notes offensive security note-taking template
