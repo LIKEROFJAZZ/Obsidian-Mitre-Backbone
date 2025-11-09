@@ -1,0 +1,13 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.hasTag("protocol")
+    order:
+      - file.name
+      - file.ctime
+      - id
+      - tags
+    columnSize:
+      file.ctime: 184

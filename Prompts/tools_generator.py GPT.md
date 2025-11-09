@@ -1,0 +1,32 @@
+Generate a Python script called **`tools_generator.py`**.  
+
+### Requirements:  
+- Creates a top-level folder named `tools`.  
+- For each tool in a predefined list, writes a markdown file named `{ToolID} - {ToolName}.md` inside `tools/`.  
+- Each markdown file must contain YAML frontmatter with:  
+  - `aliases` list (provided per tool).  
+  - `tags` list containing:  
+    - `"tool"`  
+    - `"references"`  
+    - the normalized tactic name (lowercase, spaces replaced with underscores).  
+  - `title` set to the tool name.  
+  - `id` set to the tool ID (e.g., TL0004).  
+  - `tactic` set to the tactic’s human-readable name (e.g., `"Credential Access"`).  
+  - `related_tactic` set to the tactic ID (e.g., `TA0006`).  
+  - `references` list of relevant links (homepage, GitHub repo, etc.).  
+- After the YAML frontmatter, include:  
+  - `## Synopsis` section with a short description of the tool.  
+  - `## Basic Usage` section with a fenced `bash` code block containing a basic command-line usage example.  
+- Do **not** include tactic IDs in the tags.  
+- Must be runnable as a standalone script with a `main()` function and `if __name__ == "__main__": main()`.  
+- Include these tools at minimum:  
+  - **Nmap** → Reconnaissance (TA0043)  
+  - **Metasploit** → Initial Access (TA0001)  
+  - **Cobalt Strike** → Command and Control (TA0011)  
+  - **Mimikatz** → Credential Access (TA0006)  
+  - **Empire** → Execution (TA0002)  
+  - **BloodHound** → Discovery (TA0007)  
+  - **Responder** → Credential Access (TA0006)  
+  - **Impacket** → Lateral Movement (TA0008)  
+  - **Sliver** → Command and Control (TA0011)  
+  - **CrackMapExec** → Discovery (TA0007)  

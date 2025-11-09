@@ -1,0 +1,18 @@
+views:
+  - type: table
+    name: Table
+    filters:
+      and:
+        - file.hasTag("tool")
+    order:
+      - file.name
+      - file.ctime
+      - aliases
+      - tactic
+      - file.tags
+    sort:
+      - property: file.tags
+        direction: ASC
+    columnSize:
+      file.name: 168
+      note.tactic: 252
