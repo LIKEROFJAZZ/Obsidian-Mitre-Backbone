@@ -83,7 +83,7 @@ protocols = [
 def generate_protocol_markdown(proto: dict) -> str:
     aliases_formatted = "\n".join([f"  - {alias}" for alias in proto["aliases"]])
     references_formatted = "\n".join([f"- {ref}" for ref in proto["references"]])
-    tactic_tag = normalize_tag(proto["tactic"]["name"])
+    tactic_tag = normalize_tag(proto["tactic"]["name"]["title"])
     return (
         f"---\n"
         f"aliases:\n{aliases_formatted}\n"

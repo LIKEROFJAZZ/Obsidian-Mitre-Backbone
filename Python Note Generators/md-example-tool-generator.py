@@ -112,7 +112,7 @@ tools = [
 def generate_tool_markdown(tool: dict) -> str:
     aliases_formatted = "\n".join([f"  - {alias}" for alias in tool["aliases"]])
     references_formatted = "\n".join([f"- {ref}" for ref in tool["references"]])
-    tactic_tag = normalize_tag(tool["tactic"]["name"])
+    tactic_tag = normalize_tag(tool["tactic"]["name"]["title"])
     fence = "`" * 3
     usage_block = f"{fence}bash\n{tool['usage']}\n{fence}"
     return (
